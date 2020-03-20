@@ -7024,6 +7024,7 @@ a.text-dark:hover, a.text-dark:focus {
   position: relative;
   width: 90%;
   max-width: 400px;
+  height: 100%;
   margin: auto;
   overflow: hidden;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); }
@@ -7046,7 +7047,8 @@ a.text-dark:hover, a.text-dark:focus {
   opacity: 1; }
 
 .content-image {
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
 
 .content-details {
   position: absolute;
@@ -7110,12 +7112,14 @@ a:hover {
   text-decoration: none; }
 
 #header {
-  height: 100vh;
   background-image: url("../img/header-bg.png");
   background-position: center;
   background-size: cover;
   z-index: 100;
   position: relative; }
+  @media (min-width: 992px) {
+    #header {
+      height: 100vh; } }
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -7177,6 +7181,7 @@ body {
   display: none; }
   @media (min-width: 576px) {
     .icon-bar {
+      display: block;
       position: fixed;
       top: 50%;
       -webkit-transform: translateY(-50%);
@@ -7288,3 +7293,9 @@ body {
   .carousel-caption h5 {
     font-size: 1.8rem;
     font-weight: 600; }
+  @media (min-width: 576px) {
+    .carousel-caption {
+      font-size: 1.8rem;
+      padding: 2rem; }
+      .carousel-caption h5 {
+        font-size: 2.4rem; } }
